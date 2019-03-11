@@ -1,0 +1,54 @@
+.logo {
+  font-size: 1rem;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo-text {
+  // display: none;
+  font-size: 1.125rem;
+  font-weight: normal;
+  vertical-align: middle;
+  text-transform: capitalize;
+}
+
+.logo .icon {
+  width: 2.5em;
+  height: 2.5em;
+  transform: scale(1.65);
+  vertical-align: middle;
+  margin-left: size(sm);
+  margin-right: size(xxs);
+}
+
+.logo + nav {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.logo .icon--logo {
+  opacity: 0.95;
+  width: 2.375em;
+  height: 2.375em;
+  margin-right: size(xs);
+  vertical-align: middle;
+}
+
+@include breakpoint('min', 600px) {
+  .logo-text {
+    display: inline;
+  }
+
+  .logo .icon {
+    margin-left: 0;
+    transform: none;
+  }
+}
+
+@include breakpoint('max', 642px) {
+  .logo + nav {
+    width: auto;
+  }
+}

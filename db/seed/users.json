@@ -1,0 +1,9 @@
+[{
+  "username": "newUser",
+  "admin": "true",
+  "image": "",
+  "title": "account manager",
+  "favorites": [],
+  "password": "newPassword",
+  "joined_date": {"$date":"2019-01-28T19:55:08.777Z"}
+}]

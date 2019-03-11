@@ -1,0 +1,26 @@
+section.project
+  h2.title--content
+    span.title.title-text Projects
+  ul.project-list
+    each project, index in projects
+      li.project-item
+        div.project-media
+          image(src= project.image.src, alt=project.image.alt)
+        div.project-content
+          h3.project-title
+            span.title.title-text= project.title
+          p.project-description= project.description
+          ul.project-meta
+            li.meta-item
+              span.meta-key technologies:
+              span.meta-value= project.technologies
+            li.meta-item
+              span.meta-key links:
+              span.meta-value
+                a.link(href= `${project.demo_link}`)
+                  span.link-text demo
+                //- a.link(href= `/projects/${project.slug}`)
+                //-   span.link-text details
+                a.link(href= `${project.repository}`, rel="noopener")
+                  span.link-text GitHub
+

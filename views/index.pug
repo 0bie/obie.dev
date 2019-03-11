@@ -1,0 +1,12 @@
+extends layout
+
+block page
+  - var menu = 'index'
+block content
+  div.content-container
+    div.content--home
+      include includes/home/header
+      div.content--constrain
+        include includes/home/bio
+        include includes/home/projects
+  script(type="text/javascript", src="/dist/scripts/home.js")

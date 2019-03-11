@@ -1,0 +1,147 @@
+.header .navigation {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header .navigation-item--logout {
+  margin-right: auto;
+}
+
+.navigation .menu,
+.header .navigation-item--avatar {
+  display: flex;
+  align-items: center;
+}
+
+.header .navigation a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  text-decoration: none;
+  padding-top: size(xs);
+  padding-bottom: size(xs);
+  text-transform: capitalize;
+}
+
+.header .navigation-item a::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  content: "";
+  display: block;
+  height: 3px;
+  color: transparent;
+  transition: background-color 550ms;
+}
+
+.header .navigation-text {
+  font-size: 0.875rem;
+}
+
+.menu {
+  margin-left: size(sm);
+}
+
+.menu .icon--menu {
+  top: 1px;
+}
+
+.menu .icon--menu::before,
+.menu .icon--menu::after {
+  padding: 16px;
+}
+
+.menu .icon--menu .bar::before {
+  top: 6px;
+}
+
+.menu .icon--menu .bar::after {
+  top: -6px;
+}
+
+.menu .icon--menu .bar,
+.menu .icon--menu .bar::before,
+.menu .icon--menu .bar::after {
+  height: 0.1875em;
+}
+
+@include breakpoint('min', 580px) {
+  .header .navigation-item:first-of-type {
+    margin-left: auto;
+  }
+}
+
+@include breakpoint('min', 800px) {
+  .header .navigation {
+    padding-right: size(lg);
+  }
+
+  .navigation .menu {
+    display: none;
+  }
+}
+
+/**
+ * Nested components
+ */
+
+.navigation-item .btn--xs {
+  padding: size(xxs) size(sm);
+}
+
+.navigation .avatar {
+  color: theme(default);
+  margin-right: size(xs);
+  vertical-align: middle;
+}
+
+
+.navigation .avatar-text {
+  color: #fafafa;
+}
+
+.navigation .avatar-label {
+  display: none;
+  font-size: 0.875rem;
+  font-weight: bold;
+  white-space: nowrap;
+  vertical-align: middle;
+  color: theme(default);
+}
+
+@include breakpoint('min', 800px) {
+  .navigation .avatar-label {
+    display: inline;
+  }
+}
+
+@include breakpoint('max', 600px) {
+  .header .navigation-item--avatar {
+    margin-left: auto;
+  }
+}
+
+/**
+ * Interactive states
+ */
+
+.navigation a:not(.btn):hover {
+  text-decoration: underline;
+}
+
+.header .navigation-item a:focus::after,
+.header .navigation-item a:hover::after,
+.header .navigation-item a:active::after,
+.header .navigation-item--active a::after {
+  background-color: theme(default);
+}
+
+.header .navigation-item .btn:focus {
+  box-shadow: none;
+}

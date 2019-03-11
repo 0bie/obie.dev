@@ -1,0 +1,15 @@
+section#note_container.note-container(data-id, data-note= notes[0])
+  header.note-header
+    h3.title
+      span.title-text= notes[0].title
+    div.note-actions
+      button.btn.btn--xs.btn--hover(title="Favorite this note", data-favorite)
+        span.text--sr favorite this note
+        include ../icon/favorite
+  div.note-tags
+    each tag, index in notes[0].tags
+      span.btn.btn--xs.btn--tag(class=`btn--tag-${tag.label}`)
+        span.btn-text= tag.label
+  div.note-body
+    div.note-content
+      div.mb--xxxxl(id="note_content")= notes[0].text

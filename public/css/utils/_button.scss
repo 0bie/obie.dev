@@ -1,0 +1,33 @@
+a.btn {
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn--xs .btn-text {
+  font-size: 0.875rem;
+}
+
+.btn--success {
+  border: 0;
+  color: #fafafa;
+  background-color: theme(success);
+}
+
+.btn--primary {
+  border: 0;
+  color: #fafafa;
+  background-color: theme(default);
+}
+
+.btn--disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+/**
+ * Interactive states
+ */
+.btn--primary:hover {
+  background-color: color(theme(default) l(50%));
+}

@@ -1,0 +1,171 @@
+.main {
+  overflow: visible;
+}
+
+.content-container {
+  height: 100%;
+}
+
+.content--constrain {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: size(sm);
+}
+
+.content--home {
+  position: relative;
+  height: 100%;
+  overflow: auto;
+}
+
+.content--home .sidebar,
+.content--home .note-container {
+  background-color: #fff;
+}
+
+.content--admin {
+  padding-top: size(xs);
+  padding-bottom: size(sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.content--profile {
+  color: #fafafa;
+  padding: size(sm);
+  margin-bottom: size(md);
+  background-color: theme(default);
+}
+
+.content--manager {
+  flex-grow: 1;
+}
+
+.content--post {
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: size(xs) size(md) size(xxl) size(md);
+}
+
+.content--login + footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: get-zindex(apex);
+  color: #fafafa;
+  padding: size(xs);
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 0.75rem;
+}
+
+@include breakpoint(null, 599px , 799px) {
+  .content--login + footer {
+    left: 50%
+  }
+}
+
+@include breakpoint('min', 800px) {
+  .main {
+    overflow: visible;
+  }
+
+  .content {
+    height: calc(100% - 2.375em);
+  }
+
+  .content--admin,
+  .content--login {
+    height: 100%;
+  }
+
+  .content--login {
+    display: flex;
+    align-items: center;
+    background-color: rgba(99, 113, 127, 0.95);
+  }
+
+  .content--admin {
+    flex-direction: row;
+  }
+
+  .content--profile {
+    flex-grow: 1;
+    flex-basis: calc(25% - 1.25em);
+    width: calc(25% - 1.25em);
+    max-width: calc(25% - 1.25em);
+    margin-bottom: 0;
+    margin-right: 1.25em;
+  }
+
+  .content--manager {
+    display: flex;
+    height: calc(100% - 2.5em);
+    flex-direction: column;
+    // justify-content: space-between;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@include breakpoint('min', 1280px) {
+  .main {
+    border: 0.0625em solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  }
+}
+
+@include breakpoint('min', 1680px) {
+  .main {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@include breakpoint('max', 799px) {
+  .content {
+    height: calc(100% - 2.375em);
+  }
+
+  .content--login {
+    height: 100%;
+  }
+
+  .content--admin {
+    height: calc(100vh - 7.1875em);
+    min-height: calc(100vh - 7.1875em);
+    max-height: calc(100vh - 7.1875em);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@include breakpoint('min', 601px) {
+  .reveal--sm {
+    display: none !important;
+  }
+}
+
+@include breakpoint('max', 600px) {
+  .content--home {
+    flex-direction: column;
+  }
+
+  .content--post {
+    padding: size(sm) size(sm) size(xl) ;
+  }
+
+  .removed--sm {
+    display: none !important;
+  }
+
+  .reveal--sm {
+    display: block !important;
+  }
+}
