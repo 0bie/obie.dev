@@ -61,11 +61,10 @@ module.exports = {
   },
   optimization: {
     minimizer: [
-      new TerserPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: true
-      }),
+        new TerserPlugin({
+            parallel: true,
+            extractComments: false
+        }),
       new OptimizeCssAssetsPlugin({
         cssProcessorPluginOptions: {
           preset: ['default', {

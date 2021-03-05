@@ -6,8 +6,8 @@ const models = require('./models');
 const connect = require('./db');
 const favicon = require('serve-favicon');
 
-const dbName = process.env.DB_NAME || 'OBIEDEVdb';
-const dbUrl = process.env.MONGOHQ_URL || `mongodb://@localhost:27017/${dbName}`;
+const dbName = process.env.DB_NAME || 'OBIE_DEV_DB';
+const dbUrl = 'mongodb://localhost:27017/OBIE_DEV_DB';
 
 connect(dbUrl);
 
@@ -19,7 +19,7 @@ const session = require('express-session'); // `session` depends on `cookieParse
 const methodOverride = require('method-override');
 
 const app = express();
-app.locals.appTitle = 'Obie Egwim - Front End Developer';
+app.locals.appTitle = 'Obie Egwim - Software Engineer';
 
 // Expose `models` to request handlers
 app.use((req, res, next) => {

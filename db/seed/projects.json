@@ -1,49 +1,36 @@
 [{
   "project_id": 1,
-  "title": "winkel",
-  "slug": "winkel",
+  "title": "winkel SSR",
+  "slug": "winkel-ssr",
   "published": true,
-  "demo_link": "http://winkel.obie.dev",
-  "repository": "http://github.com/0bie/winkel",
-  "description": "Manage interactions with current and potential product suppliers. Keep up to date with offers on the market, and engage with vendors through messages and purchase offers.",
-  "technologies": "JavaScript, React.js, Redux, GraphQL, Apollo Server, MongoDB",
+  "demo_link": "https://winkel-ssr.obie.dev",
+  "repository": "https://github.com/0bie/winkel-ssr",
+  "description": "Order management application for commerce. Includes a server rendered progressive web app that fetches data from a MongoDB database via GraphQL.",
+  "technologies": "JavaScript, React.js, Express, Apollo Server, PWA, SSR, MongoDB",
   "image": {
     "src": "/image/logo/winkel.svg",
-    "alt": "winkel -- commerce management tool"
+    "alt": "winkel -- order management tool"
   }
 }, {
-  "project_id": 2,
-  "title": "analis",
-  "slug": "analis",
-  "published": true,
-  "demo_link": "http://analis.obie.dev",
-  "repository": "http://github.com/0bie/analis",
-  "description": "Learn about industry trends in emerging markets through published reports and statistics.",
-  "technologies": "JavaScript, React.js, Redux, GraphQL, YouTube API, Flickr API, MongoDB",
-  "image": {
-    "src": "/image/logo/analis.svg",
-    "alt": "analis -- economic reporting tool"
-  }
-}, {
+    "project_id": 2,
+    "title": "winkel",
+    "slug": "winkel",
+    "published": true,
+    "demo_link": "https://winkel.obie.dev",
+    "repository": "https://github.com/0bie/winkel",
+    "description": "Order management application for commerce. Includes a single page app that fetches data from a MongoDB database via GraphQL.",
+    "technologies": "JavaScript, React.js, Redux, Apollo Server, MongoDB",
+    "image": {
+      "src": "/image/logo/winkel.svg",
+      "alt": "winkel -- order management tool"
+    }
+  },{
   "project_id": 3,
-  "title": "notepad",
-  "slug": "notepad",
-  "published": true,
-  "demo_link": "http://note.obie.dev",
-  "repository": "http://github.com/0bie/notepad",
-  "description": "Create and organize your notes, browse through a published list, or bookmark notes for later.",
-  "technologies": "JavaScript, MongoDB, Express, RESTful",
-  "image": {
-    "src": "/image/logo/notepad.svg",
-    "alt": "notepad -- note taking tool"
-  }
-},{
-  "project_id": 4,
   "title": "pattern library",
   "slug": "pattern-library",
   "published": true,
-  "demo_link": "http://pattern-library.obie.dev",
-  "repository": "http://github.com/0bie/pattern-lib-react",
+  "demo_link": "https://pattern-library.obie.dev",
+  "repository": "https://github.com/0bie/pattern-lib-react",
   "description": "A collection of reusable User Interface components.",
   "technologies": "JavaScript, React.js, Sass, PostCSS",
   "image": {
