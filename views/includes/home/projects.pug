@@ -5,7 +5,8 @@ section.project
     each project, index in projects
       li.project-item
         div.project-media
-          image(src= project.image.src, alt=project.image.alt)
+          a.link(href= `${project.demo_link}`)
+            image(src= project.image.src, alt=project.image.alt)
         div.project-content
           h3.project-title
             span.title.title-text= project.title

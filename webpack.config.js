@@ -1,5 +1,5 @@
 const commonConfig = require('./config/webpack.common');
-const webpackMerge = require('webpack-merge');
+const {merge} = require('webpack-merge');
 
 /**
  * @param {object} env - The environment variables
@@ -14,7 +14,7 @@ module.exports = (env) => {
   }
 
   const envConfig = require(`./config/webpack.${env.env}`);
-  const mergedConfig = webpackMerge(commonConfig, envConfig);
+  const mergedConfig = merge(commonConfig, envConfig);
 
   return mergedConfig;
 
