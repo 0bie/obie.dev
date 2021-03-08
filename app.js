@@ -58,6 +58,16 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use((request, response, next) => {
+    const cacheTime = 60 * 5 // 5m
+    if (request.method == 'GET') {
+        response.set('Cache-control', `public, max-age=${cacheTime} `)
+    } else {
+        response.set('Cache-control', 'no store')
+    }
+    next();
+});
+
 // development only
 if (app.get('env') === 'development') {
   app.use(errorHandler('dev'));
