@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./scripts/routes/home.js"],"names":["console","log"],"mappings":"qFAAAA,QAAQC,IAAI","file":"scripts/scripts_routes_home_js.js","sourcesContent":["console.log('root'); // eslint-disable-line no-console\n"],"sourceRoot":""}
